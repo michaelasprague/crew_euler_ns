@@ -1,0 +1,34 @@
+11 January 2012
+
+Updated some files to make sure all was working with the Kovasnay benchmark
+case. 
+
+Seems to be basically working.
+
+Here are some (tmax,rmsu) data
+
+nx = ny = 31
+dt,dx,dy,cn    8.7060672394305271E-003   3.2258064516129031E-002
+3.2258064516129031E-002  0.5
+
+0.98378559805565147        3.3307669660026969E-003
+
+nx = ny = 51
+ dt,dx,dy,cn    5.2919232239675758E-003   1.9607843137254902E-002
+1.9607843137254902E-002  0.5
+1.9897631322118210        1.1683843297760955E-003
+
+nx = ny = 91
+dt,dx,dy,cn    2.9658031255202898E-003   1.0989010989010990E-002
+1.0989010989010990E-002  0.50000000000000000
+   2.9954611567755065        3.4751816225331701E-004  
+
+These data show a second-order convergence rate.
+
+In regard to the number of pressure iterations (nx = ny = 91), starts out
+requiring over 500 pressure iterations -- that goes down to order 10 at
+steady state.
+
+In regard to divergence, for nx = ny = 31, 
+div_rms, div_max:   7.7363683139019579E-014   2.1716211728167734E-012
+
